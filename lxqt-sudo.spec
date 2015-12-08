@@ -12,7 +12,7 @@ BuildRequires:	qt5-devel
 BuildRequires:	qt5-linguist-tools
 
 %description
-Execute a command as privileged user in LXQt
+Execute a command as privileged user in LXQt.
 
 %files -f %{name}.lang
 %{_bindir}/*
