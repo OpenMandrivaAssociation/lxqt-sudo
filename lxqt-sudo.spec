@@ -8,8 +8,8 @@ License:	GPL
 Group:		Graphical desktop/Other
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(lxqt)
-BuildRequires:	qt5-devel
-BuildRequires:	qt5-linguist-tools
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5LinguistTools)
 
 %description
 Execute a command as privileged user in LXQt.
