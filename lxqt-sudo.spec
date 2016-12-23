@@ -7,6 +7,7 @@ Url:		http://lxqt.org/
 License:	GPL
 Group:		Graphical desktop/Other
 BuildRequires:	cmake
+BuildRequires:	qmake5
 BuildRequires:	pkgconfig(lxqt)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5LinguistTools)
@@ -22,7 +23,7 @@ Execute a command as privileged user in LXQt.
 
 %prep
 %setup -q
-%cmake -DUSE_QT5:BOOL=ON
+%cmake_qt5 -DUSE_QT5:BOOL=ON
 
 %build
 %make -C build
