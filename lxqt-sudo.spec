@@ -1,7 +1,7 @@
 Name:		lxqt-sudo
-Version:	0.11.1
+Version:	0.12.0
 Release:	1
-Source0:	http://downloads.lxqt.org/lxqt/%{version}/%{name}-%{version}.tar.xz
+Source0:	https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary:	Sudo for the LXQt desktop
 Url:		http://lxqt.org/
 License:	GPL
@@ -11,6 +11,7 @@ BuildRequires:	qmake5
 BuildRequires:	pkgconfig(lxqt)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5LinguistTools)
+BuildRequires:	lxqt-build-tools git-core
 
 %description
 Execute a command as privileged user in LXQt.
