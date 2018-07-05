@@ -6,7 +6,7 @@ Summary:	Sudo for the LXQt desktop
 Url:		http://lxqt.org/
 License:	GPL
 Group:		Graphical desktop/Other
-BuildRequires:	cmake
+BuildRequires:	cmake ninja
 BuildRequires:	qmake5
 BuildRequires:	pkgconfig(lxqt)
 BuildRequires:	cmake(Qt5Widgets)
@@ -16,7 +16,7 @@ BuildRequires:	lxqt-build-tools git-core
 %description
 Execute a command as privileged user in LXQt.
 
-%files -f %{name}.lang
+%files
 %{_bindir}/*
 %{_mandir}/*man?/*
 
@@ -24,12 +24,12 @@ Execute a command as privileged user in LXQt.
 
 %prep
 %setup -q
-%cmake_qt5 -DUSE_QT5:BOOL=ON
+%cmake_qt5 \
+	-DPULL_TRANSLATIONS:BOOL=OFF \
+	-G Ninja
 
 %build
-%make -C build
+%ninja_build -C build
 
 %install
-%makeinstall_std -C build
-
-%find_lang %{name} %{name}.lang --with-qt
+%ninja_install -C build
