@@ -1,6 +1,6 @@
 Name:		lxqt-sudo
-Version:	0.13.0
-Release:	2
+Version:	0.14.0
+Release:	1
 Source0:	https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary:	Sudo for the LXQt desktop
 Url:		http://lxqt.org/
@@ -17,7 +17,7 @@ BuildRequires:	cmake(lxqt-build-tools)
 %description
 Execute a command as privileged user in LXQt.
 
-%files
+%files -f %{name}.lang
 %{_bindir}/*
 %{_mandir}/*man?/*
 
@@ -34,3 +34,4 @@ Execute a command as privileged user in LXQt.
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-qt --all-name
