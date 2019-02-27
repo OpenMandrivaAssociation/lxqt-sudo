@@ -1,5 +1,5 @@
 Name:		lxqt-sudo
-Version:	0.14.0
+Version:	0.14.1
 Release:	1
 Source0:	https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
 Summary:	Sudo for the LXQt desktop
