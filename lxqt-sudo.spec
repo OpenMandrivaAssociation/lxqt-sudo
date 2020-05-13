@@ -1,7 +1,7 @@
 Name:		lxqt-sudo
-Version:	0.14.1
-Release:	2
-Source0:	https://downloads.lxqt.org/downloads/%{name}/%{version}/%{name}-%{version}.tar.xz
+Version:	0.15.0
+Release:	1
+Source0:	https://github.com/lxqt/lxqt-sudo/releases/download/%{version}/lxqt-sudo-%{version}.tar.xz
 Summary:	Sudo for the LXQt desktop
 Url:		http://lxqt.org/
 License:	GPL
@@ -20,6 +20,8 @@ Execute a command as privileged user in LXQt.
 %files -f %{name}.lang
 %{_bindir}/*
 %{_mandir}/*man?/*
+%lang(arn) %{_datadir}/lxqt/translations/lxqt-sudo/lxqt-sudo_arn.qm
+%lang(ast) %{_datadir}/lxqt/translations/lxqt-sudo/lxqt-sudo_ast.qm
 
 #----------------------------------------------------------------------------
 
