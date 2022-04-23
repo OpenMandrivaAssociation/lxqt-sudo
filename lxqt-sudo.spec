@@ -1,5 +1,5 @@
 Name:		lxqt-sudo
-Version:	1.0.0
+Version:	1.1.0
 Release:	1
 Source0:	https://github.com/lxqt/lxqt-sudo/releases/download/%{version}/lxqt-sudo-%{version}.tar.xz
 Summary:	Sudo for the LXQt desktop
@@ -20,13 +20,12 @@ Execute a command as privileged user in LXQt.
 %files -f %{name}.lang
 %{_bindir}/*
 %{_mandir}/*man?/*
-%lang(arn) %{_datadir}/lxqt/translations/lxqt-sudo/lxqt-sudo_arn.qm
-%lang(ast) %{_datadir}/lxqt/translations/lxqt-sudo/lxqt-sudo_ast.qm
+%dir %{_datadir}/lxqt/translations/lxqt-sudo
 
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_qt5 \
 	-DPULL_TRANSLATIONS:BOOL=OFF \
 	-G Ninja
