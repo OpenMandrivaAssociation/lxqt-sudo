@@ -25,7 +25,7 @@ Execute a command as privileged user in LXQt.
 
 %prep
 %autosetup -p1
-%cmake_qt5 \
+%cmake \
 	-DPULL_TRANSLATIONS:BOOL=OFF \
 	-G Ninja
 
