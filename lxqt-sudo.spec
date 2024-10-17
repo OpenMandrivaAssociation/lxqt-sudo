@@ -3,7 +3,7 @@ Version:	2.0.0
 Release:	2
 Source0:	https://github.com/lxqt/lxqt-sudo/releases/download/%{version}/lxqt-sudo-%{version}.tar.xz
 Summary:	Sudo for the LXQt desktop
-Url:		http://lxqt.org/
+Url:		https://lxqt.org/
 License:	GPL
 Group:		Graphical desktop/Other
 BuildRequires:	cmake
