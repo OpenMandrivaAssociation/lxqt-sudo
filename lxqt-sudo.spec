@@ -29,7 +29,7 @@ Execute a command as privileged user in LXQt.
 %cmake \
 	-DPULL_TRANSLATIONS:BOOL=OFF \
 	-G Ninja
-%ninja_build -C build
+%ninja_build
 
 %install
 %ninja_install -C build
