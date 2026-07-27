@@ -25,11 +25,10 @@ Execute a command as privileged user in LXQt.
 
 %prep
 %autosetup -p1
+%build
 %cmake \
 	-DPULL_TRANSLATIONS:BOOL=OFF \
 	-G Ninja
-
-%build
 %ninja_build -C build
 
 %install
