@@ -1,13 +1,13 @@
 Name:		lxqt-sudo
 Version:	2.4.0
-Release:	1
+Release:	2
 Source0:	https://github.com/lxqt/lxqt-sudo/releases/download/%{version}/lxqt-sudo-%{version}.tar.xz
 Summary:	Sudo for the LXQt desktop
 Url:		https://lxqt.org/
 License:	GPL
 Group:		Graphical desktop/Other
-BuildRequires:	cmake
-BuildRequires:	ninja
+BuildSystem:	cmake
+BuildOption:	-DPULL_TRANSLATIONS:BOOL=OFF
 BuildRequires:	pkgconfig(lxqt)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6LinguistTools)
@@ -20,17 +20,3 @@ Execute a command as privileged user in LXQt.
 %{_bindir}/*
 %{_mandir}/*man?/*
 %dir %{_datadir}/lxqt/translations/lxqt-sudo
-
-#----------------------------------------------------------------------------
-
-%prep
-%autosetup -p1
-%build
-%cmake \
-	-DPULL_TRANSLATIONS:BOOL=OFF \
-	-G Ninja
-%ninja_build
-
-%install
-%ninja_install -C build
-%find_lang %{name} --with-qt --all-name
